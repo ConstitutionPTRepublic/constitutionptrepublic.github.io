@@ -1,0 +1,308 @@
+body {
+    width: 98%;
+    padding: 5px;
+    margin: 0 auto;
+    font-size: 15px;
+}
+div#leftbar {
+    width: 100%;
+    float: none;
+    font-size: 15px;
+}
+div#leftbar a#banner {
+    /* pointer-events: none;
+    cursor: default; */
+    border-bottom: none;
+}
+div#leftbar div#sidecontent {
+    visibility: hidden;
+    display: none;
+    width: 0;
+    height: 0;
+}
+div#content {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+}
+
+div#content div#children p {
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 20px ;
+  text-indent: -10px ;
+}
+div#content div#children p.part,
+div#content div#children p#principios_fundamentais,
+div#content div#children p#disposicoes_finais_transitorias {
+  font-weight: bold;
+}
+div#content div#children p.title {
+}
+div#content div#children p.chapter {
+  font-style: italic;
+}
+div#content div#children p.article {
+  margin-left: 20px;
+}
+div#content div#children p.note {
+  margin-bottom: 0;
+  margin-left: 30px;
+}
+div#content div#children p.separator {
+  line-height: 0;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 320px) {
+    body {
+        padding: 10px;
+    }
+}
+
+@media print or (only screen and (min-width: 480px)) {
+    body {
+        font-size: 16px;
+        width: 95%;
+        padding: 20px;
+    }
+    div#leftbar a#banner {
+        font-size: 16px;
+    }
+}
+
+/* Sidebar appears */
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
+        width: 90%;
+        padding: 30px;
+    }
+    div#leftbar {
+        float: left;
+        width: 180px;
+    }
+    div#leftbar a#banner {
+        font-size: 18px;
+        /*pointer-events: auto;
+        cursor: auto;*/
+        border-bottom: 1px dotted #999;
+    }
+    div#leftbar a#banner:hover {
+        border-bottom: 1px solid #999;
+    }
+    div#leftbar div#sidecontent {
+        visibility: visible;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    div#content {
+        margin-top: 0px;
+        margin-left: 220px;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    body {
+        width: 880px;
+        padding: 40px;
+    }
+    div#leftbar {
+        width: 200px;
+    }
+    div#leftbar img#signal {
+        width: 180px;
+    }
+    div#content {
+        margin-left: 240px;
+    }
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather Regular'),
+       local('Merriweather-Regular'),
+       url('../fonts/merriweather.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Merriweather IE';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/merriweather.eot');
+  src: url('../fonts/merriweather.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('SourceSansPro'),
+         local('SourceSansPro-Regular'),
+         url('../fonts/sourcesanspro.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'SourceSansPro IE';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/sourcesanspro.eot');
+    src: url('../fonts/sourcesanspro.eot?#iefix') format('embedded-opentype');
+}
+
+body {
+    font-family: 'SourceSansPro', 'SourceSansPro IE', sans-serif;
+    line-height: 1.3;
+}
+h1, h2, h3, h4 {
+    font-weight: normal;
+    font-family: 'Merriweather', 'Merriweather IE', Georgia, serif;
+}
+h4 {
+    color: rgb(105,105,105);
+}
+
+a {
+    color: #004B6B;
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+}
+a:hover {
+    border-bottom: 1px solid #999;
+}
+div#leftbar a {
+    color: #444;
+}
+
+div#content img {
+    width: 95%;
+}
+
+
+blockquote {
+    border-left: 5px solid #E5E5E5;
+    padding-left: 15px;
+}
+
+:target {
+    /*padding-left: 5px;*/
+    padding-right: 2px;
+    border-right: 7px solid rgba(0, 75, 107, 0.75);
+    /*background-color: #D4F2F9;
+    -webkit-transition: all 0.5s linear;*/
+}
+
+dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+p.indented {
+  padding-left: 3%;
+}
+
+
+p.note {
+  margin-left:  5px;
+  padding-left: 5px;
+  border-left: 10px solid rgba(192, 192, 192, 0.75);
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  margin-top: 0;
+  padding-top: 0;
+  color: rgb(105,105,105);
+  font-size: 95%;
+}
+
+a.headerlink {
+  visibility: hidden;
+  color: #DDD;
+  padding: 0 8px;
+  text-decoration: none;
+}
+
+a.headerlink:hover {
+    color: #444;
+    background: #EAEAEA;
+}
+
+p:hover > a.headerlink {
+  visibility: visible;
+}
+
+p.level0 {
+  margin: 0;
+  text-decoration: underline;
+}
+p.level1 {
+  margin: 0;
+  font-style: italic;
+}
+p.level2 {
+  margin: 0;
+  margin-left: 20px;
+}
+p.level3 {
+  margin: 0;
+  margin-left: 40px;
+}
+p.level4 {
+  margin: 0;
+  margin-left: 60px;
+}
+p.level5 {
+  margin: 0;
+  margin-left: 80px;
+}
+p.level6 {
+  margin: 0;
+  margin-left: 100px;
+}
+
+span.generic {
+  color: rgba(0, 75, 107, 0.75);
+}
+
+span.generic:hover {
+  font-weight: bold;
+}
+
+p.ref  {line-height: 1;}
+p.ref0 {font-style: italic;}
+p.ref1 {padding-left: 15px;}
+p.ref2 {padding-left: 30px;}
+p.ref3 {padding-left: 45px;}
+p.ref4 {padding-left: 60px;}
+p.ref5 {padding-left: 75px;}
+p.ref6 {padding-left: 90px;}
+p.ref7 {padding-left: 105px;}
+
+p.small {color: grey; font-size: 80%;}
+
+span.delete{
+    color: #8e36a0;  /* purple */
+    text-decoration: line-through;
+}
+span.insert{
+    color: #3662a0;  /* blue */
+    text-decoration: underline;
+}
+
+span.badge {
+    margin: 0 3px;
+    padding: 2px 8px;
+    border-radius: 3px 3px 3px 3px;
+    font-size: 80%;
+}
+
+span.badge-primary {
+    background: grey;
+    color: white;
+    font-weight: bold;
+    
+}
